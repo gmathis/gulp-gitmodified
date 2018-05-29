@@ -37,7 +37,7 @@ module.exports = function (modes) {
 
   if (!modes.length) modes = ['M'];
 
-  regexTest = new RegExp('^('+modes.join('|')+')\\s', 'i');
+  regexTest = new RegExp('^('+modes.join('|')+'){1,2}\\s', 'i');
 
   var gitmodified = function (file, enc, callback) {
     var stream = this;
